@@ -190,7 +190,7 @@ for (l = 0; l < qiuzButtons.length; l++) {
 				questCounter.innerHTML = "Вопрос 6 из 8";
 				question.innerHTML = "Как хотите штукатурить?";
 				progressLine.style.width = "75%";
-				document.querySelector("#quiz-btn-next").style.display = "block";
+				document.querySelector("#quiz-btn-next").style.display = "flex";
 				document.querySelector(".submitForm").style.display = "none";
 				return;
 			};
