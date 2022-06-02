@@ -71,6 +71,7 @@ $('a[href*=#]:not([href=#])').click(function () {
 			}, 500, function () {
 				target.focus();
 			});
+			console.log(target);
 			return false;
 		}
 	}
@@ -244,6 +245,23 @@ for (l = 0; l < qiuzButtons.length; l++) {
 			};
 			if (quizCounter == 6) {
 				quizCounter++;
+
+
+				// прокрутка после завершения квиза
+				$("#quiz-btn-next").click(function () {
+					var target = $("#quiz");
+					headerHeight = $('#header').height();
+					if (target) {
+						$('html,body').animate({
+							scrollTop: target.offset().top - headerHeight
+						}, 500, function () {
+							target.focus();
+						});
+						return false;
+					}
+				});
+
+
 				answers6.classList.remove("show");
 				answers7.classList.add("show");
 				questCounter.innerHTML = "Вопрос 7 из 8";
