@@ -216,6 +216,10 @@ body._action {
 	transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
 }
 
+.works-plate .animated {
+	transform: translate(0);
+}
+
 .animated.left {
 	transform: translateX(-50px);
 }
@@ -1351,13 +1355,15 @@ footer {
 	.price__box {
 		position: absolute;
 		z-index: -100;
-		opacity: 0
+		opacity: 0;
+		display: none;
 	}
 
 	.price__box.active {
 		position: relative;
 		z-index: 2;
-		opacity: 1
+		opacity: 1;
+		display: block;
 	}
 
 	.works-plate {
@@ -1371,6 +1377,10 @@ footer {
 	.works-plate-item {
 		border: none;
 		padding: 0;
+	}
+
+	.works-plate .animated {
+		transform: translate(0);
 	}
 }
 
@@ -1511,6 +1521,7 @@ footer {
 	.wrapper {
 		padding-right: 15px;
 		padding-left: 15px;
+		margin-bottom: 15px;
 	}
 
 	.header-left .btn-full {
