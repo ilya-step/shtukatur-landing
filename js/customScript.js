@@ -145,7 +145,7 @@ for (l = 0; l < qiuzButtons.length; l++) {
 				questCounter.innerHTML = "Вопрос 1 из 8";
 				question.innerHTML = "Что вы хотите оштукатурить?:";
 				progressLine.style.width = "25%";
-				document.querySelector("#quiz-btn-prev").style.display = "none";
+				document.querySelector("#quiz-btn-prev").style.visibility = "hidden";
 				return;
 			};
 			if (quizCounter == 3) {
@@ -204,7 +204,7 @@ for (l = 0; l < qiuzButtons.length; l++) {
 				questCounter.innerHTML = "Вопрос 2 из 8";
 				question.innerHTML = "Из чего стены?";
 				progressLine.style.width = "35%";
-				document.querySelector("#quiz-btn-prev").style.display = "flex";
+				document.querySelector("#quiz-btn-prev").style.visibility = "visible";
 				return;
 			};
 			if (quizCounter == 2) {
